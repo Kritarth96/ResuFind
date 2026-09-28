@@ -1,0 +1,22 @@
+# Secrets and local configuration
+api/.env
+web/.env.local
+
+# Python
+api/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local data
+api/resufind.db
+
+# Next.js
+web/.next/
+web/out/
+web/node_modules/
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db

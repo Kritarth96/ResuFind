@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: resufind-api
+    runtime: python
+    rootDir: api
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: FRONTEND_URL
+        sync: false
+      - key: SERPAPI_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-flash-lite-latest
